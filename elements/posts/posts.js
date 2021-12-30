@@ -1,11 +1,18 @@
 class Posts extends HTMLElement {
     constructor() {
       super();
+
+      const url = new URL(window.location);
+      const searchParams = url.searchParams;
+      const limit = parseInt(searchParams.get('limit') || 10, 10);
+      const offset = parseInt(searchParams.get('offset') || 0, 10);
+      
+
       // TODO: filtering, pagination, etc.
-      fetch(`${this.getAttribute('value')}.json`).then(async (res) => {
+      fetch(`${this.getAttribute('value')}.json?limit=${limit}&offset=${offset}`).then(async (res) => {
         const val = await res.json();
 
-        const searchParams = new URL(window.location).searchParams;
+        
         val.data
         .map(({Filename, Title, Colors, Tags, Image}) => ({Filename, Title, 
             Colors: Colors.split(',').map(c => c.trim()), 
@@ -35,13 +42,17 @@ class Posts extends HTMLElement {
 
           Colors.forEach(color => {
             const li = document.createElement('li');
-            li.innerHTML = `<a href="/colors?color=${color}" class="${color}">${color}</a>`;
+            const myurl = new URL(url.href);
+            myurl.searchParams.set('color', color);
+            li.innerHTML = `<a href="${myurl.href}" class="${color}">${color}</a>`;
             colors.appendChild(li);
           });
 
           Tags.forEach(tag => {
             const li = document.createElement('li');
-            li.innerHTML = `<a href="/tags?tag=${tag}">${tag}</a>`;
+            const myurl = new URL(url.href);
+            myurl.searchParams.set('tag', tag);
+            li.innerHTML = `<a href="${myurl.href}">${tag}</a>`;
             categories.appendChild(li);
           });
 
@@ -49,6 +60,30 @@ class Posts extends HTMLElement {
           parent.appendChild(card);
           return parent;
         }, this);
+
+        const nav = document.createElement('nav');
+        this.appendChild(nav);
+
+        if (offset > 0) {
+            console.log('adding previous link');
+            const more = document.createElement('a');
+            url.searchParams.set('limit', limit);
+            url.searchParams.set('offset', Math.max(0, offset - limit));
+            more.href = url.href;
+            more.className = 'previous';
+            more.innerHTML = 'previous page';
+            nav.appendChild(more);
+        }
+        if (val.data.length > 0) {
+            console.log('adding more link');
+            const more = document.createElement('a');
+            url.searchParams.set('limit', limit);
+            url.searchParams.set('offset', offset + limit);
+            more.href = url.href;
+            more.className = 'next';
+            more.innerHTML = 'next page';
+            nav.appendChild(more);
+        }
       });
     }
   }

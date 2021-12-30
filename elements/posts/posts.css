@@ -1,4 +1,4 @@
-helix-posts a:link {
+helix-posts a:link, helix-posts a:visited {
     text-decoration: none;
     color: var(--main-txt-color);
 }
@@ -84,6 +84,19 @@ helix-posts picture img {
     border-color: var(--main-highlight-color);
     display: block;
     max-width: 100%;
+}
+
+helix-posts nav {
+    text-align: center;
+    margin-top: 1em;
+}
+
+helix-posts nav a.next::after {
+    content: ' »'
+}
+
+helix-posts nav a.previous::before {
+    content: '« '
 }
 
 @media (max-width: 500px) {

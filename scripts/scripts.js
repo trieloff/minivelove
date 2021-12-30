@@ -141,7 +141,7 @@
    * @param {Element} $block The block element
    */
   export async function loadBlock($block) {
-    const blockName = $block.getAttribute('data-block-name');
+    const blockName = $block.getAttribute('data-block-name') || $block.tagName.toLowerCase().replace(/^[^-]+-/, '');
     try {
       /* const mod = await import(`/blocks/${blockName}/${blockName}.js`);
       if (mod.default) {
@@ -301,34 +301,13 @@
   }
 
   function addMenu(main) {
-    const checkbox = document.createElement('input');
-    checkbox.id = 'navigation';
-    checkbox.type = 'checkbox';
-    const label = document.createElement('label');
-    label.setAttribute('for', 'navigation');
-    label.innerHTML = `
-        <span class="bar">-</span>
-        <span class="bar">-</span>
-        <span class="bar">-</span>
-    `;
-
-    const nav = document.createElement('nav');
-    nav.innerHTML = `
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/">About</a></li>
-            <li><a href="/">Contact</a></li>
-        </ul>
-    `;
+    const menu = document.createElement('custom-menu');
 
     const h1 = document.createElement('h1');
     h1.innerHTML = `<span id="mini">Mini</span><span id="velo">velo</span>ve`;
-
-   
-    main.prepend(nav);
-    main.prepend(checkbox);
-    main.prepend(label);
     main.prepend(h1);
+    main.prepend(menu);
+    loadBlock(menu);
   }
   
   /**
