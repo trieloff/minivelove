@@ -17,7 +17,7 @@ class Gallery extends HTMLElement {
             if ((clicked === selected) && next && !goback) {
                 next.className = 'selected';
             }else if ((clicked === selected) && previous && goback) {
-                next.className = 'selected';
+                previous.className = 'selected';
             } else if (clicked === selected) {
                 console.log('deselect');
             } else {
