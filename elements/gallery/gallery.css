@@ -1,0 +1,66 @@
+helix-gallery img, helix-gallery picture {
+    cursor: pointer;
+}
+
+helix-gallery img.selected {
+    position: fixed;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: 100vw;
+    width: 100vw;
+    top: 50%;
+    border: 0px;
+    margin-top: -50vh;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (min-width: 500px) {
+
+    helix-gallery {
+        line-height: 0;
+        column-count: 3;
+        column-gap: 0.4em;
+        display: block;
+    }
+
+    helix-gallery * {
+        display: inline;
+    }
+
+    helix-gallery * img {
+        display: inline-block;
+        width: 12em;
+        border-width: 0.5em;
+    }
+}
+
+@media (max-width: 500px) {
+
+    helix-gallery {
+        column-count: 2;
+        column-gap: 0em;
+        display: block;
+    }
+
+    helix-gallery source {
+        display: none;
+    }
+
+    helix-gallery * {
+        display: inline;
+        margin: 0px;
+        vertical-align: top;
+    }
+    
+
+    helix-gallery * img {
+        display: inline-block;
+        border-width: 0em;
+        margin: 0px;
+        padding: 0px;
+    }
+}

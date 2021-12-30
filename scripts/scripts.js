@@ -235,6 +235,7 @@
    */
   export function getOptimizedImageURL(src) {
     const url = new URL(src, window.location.href);
+    console.log('optimizing', url.href);
     let result = src;
     const { pathname, search } = url;
     if (pathname.includes('media_')) {

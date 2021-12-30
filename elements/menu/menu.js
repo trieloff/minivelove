@@ -11,13 +11,6 @@ class Menu extends HTMLElement {
       <div class="navigation__background">&nbsp;</div>
   
       <nav class="navigation__nav">
-          <ul class="navigation__list">
-              <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>About Us</a></li>
-              <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your benfits</a></li>
-              <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Popular tours</a></li>
-              <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>
-              <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book now</a></li>
-          </ul>
       </nav>`;
 
       fetch('/nav').then(async (res) => {
