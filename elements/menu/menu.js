@@ -18,6 +18,13 @@ class Menu extends HTMLElement {
 
         const parser = new DOMParser();
         const doc = parser.parseFromString(await res.text(), "text/html");
+
+        Array.from(doc.querySelectorAll('a')).forEach(a => {
+            const url = new URL(a.href);
+            url.hostname = undefined;
+            a.href = url.pathname;
+        });
+
         this.querySelector('nav').innerHTML = doc.querySelector('ol').outerHTML;
         document.querySelector('footer').innerHTML = doc.body.innerHTML;
       });

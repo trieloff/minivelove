@@ -53,8 +53,8 @@ helix-posts article ul.colors li a {
     display: inline-block;
     margin: 0.5rem;
     padding: 0.5rem;
-    width: 2rem;
-    height: 2rem;
+    width: 1rem;
+    height: 1rem;
     overflow: hidden;
     border-radius: 2rem;
     color: transparent;
@@ -64,11 +64,11 @@ helix-posts article ul.colors li a {
 }
 
 helix-posts ul.colors a.Orange {
-    background-color: orange;
+    background-color: darkorange;
 }
 
 helix-posts ul.colors a.Blue {
-    background-color: blue;
+    background-color: darkblue;
 }
 
 helix-posts ul.colors a.Red {
