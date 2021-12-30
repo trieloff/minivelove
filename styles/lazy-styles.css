@@ -6,6 +6,7 @@ footer {
     margin-bottom: -2rem;
     color: var(--main-highlight-color);
     font-weight: 350;
+    font-family: 'look-script';
 }
 
 footer ol {

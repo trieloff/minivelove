@@ -23,17 +23,66 @@ helix-parts tr td:first-child {
     height: 50px;
     width: 50px;
     color: transparent;
-    background-image: url('parts.svg');
-    background-size: 700%;
-    background-position: 0% 0%;
+    background-image: url('chainset.svg');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: 10% 10%;
 }
 
 helix-parts tr.saddle td:first-child {
-    background-position: 24% 100%;
+    background-image: url('saddle.svg');
 }
 
 helix-parts tr.frame td:first-child {
-    background-position: 24% 58%;
+    background-image: url('frame.svg');
+}
+
+helix-parts tr.fork td:first-child {
+    background-image: url('fork.svg');
+}
+
+helix-parts tr.bottombracket td:first-child {
+    background-image: url('bottombracket.svg');
+}
+
+helix-parts tr.brakes td:first-child {
+    background-image: url('brakes.svg');
+}
+
+helix-parts tr.cables td:first-child {
+    background-image: url('cables.svg');
+}
+
+helix-parts tr.casette td:first-child {
+    background-image: url('casette.svg');
+}
+
+helix-parts tr.chainring td:first-child {
+    background-image: url('chainring.svg');
+}
+
+helix-parts tr.chain td:first-child {
+    background-image: url('chain.svg');
+}
+
+helix-parts tr.frontderailleur td:first-child {
+    background-image: url('frontderailleur.svg');
+}
+
+helix-parts tr.grips td:first-child {
+    background-image: url('grips.svg');
+}
+
+helix-parts tr.handlebars td:first-child {
+    background-image: url('handlebars.svg');
+}
+
+helix-parts tr.headset td:first-child {
+    background-image: url('headset.svg');
+}
+
+helix-parts tr.hubs td:first-child {
+    background-image: url('hubs.svg');
 }
 
 helix-parts a {
