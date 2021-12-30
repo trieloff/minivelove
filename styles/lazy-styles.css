@@ -1,0 +1,23 @@
+footer {
+    background-color: var(--main-txt-color);
+    margin: -1rem;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-bottom: -2rem;
+    color: var(--main-highlight-color);
+    font-weight: 350;
+}
+
+footer ol {
+    text-align: center;
+}
+
+footer ol li {
+    display: inline-block;
+    margin: 1em;
+}
+
+footer a:link, footer a:visited {
+    color: var(--main-bg-color);
+    text-decoration: none;
+}

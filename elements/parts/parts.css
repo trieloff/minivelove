@@ -3,6 +3,7 @@ helix-parts table {
     font-weight: 300;
     margin: 0px;
     border-collapse: collapse;
+    margin-top: 2rem;
 }
 
 helix-parts tr, helix-parts td {

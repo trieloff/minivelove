@@ -19,6 +19,7 @@ class Menu extends HTMLElement {
         const parser = new DOMParser();
         const doc = parser.parseFromString(await res.text(), "text/html");
         this.querySelector('nav').innerHTML = doc.querySelector('ol').outerHTML;
+        document.querySelector('footer').innerHTML = doc.body.innerHTML;
       });
   }
 }
