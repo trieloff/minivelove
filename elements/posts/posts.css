@@ -121,4 +121,9 @@ helix-posts nav a.previous::before {
     helix-posts > article {
         max-width: 18em;
     }
+
+    helix-posts nav {
+        grid-row: next;
+        grid-column: 1/span 2;
+    }
 }
