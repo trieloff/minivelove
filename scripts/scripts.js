@@ -304,7 +304,7 @@
     const menu = document.createElement('custom-menu');
 
     const h1 = document.createElement('h1');
-    h1.innerHTML = `<span id="mini">Mini</span><span id="velo">velo</span>ve`;
+    h1.innerHTML = `<span id="mini">mini</span><span id="velo">velos</span>.bike`;
     main.prepend(h1);
     main.prepend(menu);
     loadBlock(menu);
