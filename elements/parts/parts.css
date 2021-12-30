@@ -1,0 +1,40 @@
+helix-parts table {
+    width: 100%;
+    font-weight: 300;
+    margin: 0px;
+    border-collapse: collapse;
+}
+
+helix-parts tr, helix-parts td {
+    margin: 0px;
+    padding: 0px;
+}
+
+helix-parts th {
+    font-weight: 500;
+    text-align: left;
+    font-size: 50%;
+    text-transform: uppercase;
+    background: var(--main-highlight-color);
+}
+
+helix-parts tr td:first-child {
+    height: 50px;
+    width: 50px;
+    color: transparent;
+    background-image: url('parts.svg');
+    background-size: 700%;
+    background-position: 0% 0%;
+}
+
+helix-parts tr.saddle td:first-child {
+    background-position: 24% 100%;
+}
+
+helix-parts tr.frame td:first-child {
+    background-position: 24% 58%;
+}
+
+helix-parts a {
+    text-decoration: none;
+}

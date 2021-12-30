@@ -23,7 +23,7 @@ helix-gallery img.selected {
     helix-gallery {
         line-height: 0;
         column-count: 3;
-        column-gap: 0.4em;
+        column-gap: 0.4rem;
         display: block;
     }
 
@@ -33,8 +33,8 @@ helix-gallery img.selected {
 
     helix-gallery * img {
         display: inline-block;
-        width: 12em;
-        border-width: 0.5em;
+        width: 12rem;
+        border-width: 0.5rem;
     }
 }
 
@@ -42,7 +42,7 @@ helix-gallery img.selected {
 
     helix-gallery {
         column-count: 2;
-        column-gap: 0em;
+        column-gap: 0rem;
         display: block;
     }
 
@@ -59,7 +59,7 @@ helix-gallery img.selected {
 
     helix-gallery * img {
         display: inline-block;
-        border-width: 0em;
+        border-width: 0rem;
         margin: 0px;
         padding: 0px;
     }

@@ -298,7 +298,6 @@
       webpPolyfill($main);
     });
     decorateBlocks($main);
-    addMenu($main);
   }
 
   function addMenu(main) {
@@ -343,7 +342,10 @@
   async function decoratePage(win = window) {
     const doc = win.document;
     const $main = doc.querySelector('main');
+    const $header = doc.querySelector('header');
+    const $footer = doc.querySelector('footer');
     if ($main) {
+      addMenu($header);
       decorateMain($main);
       setLCPTrigger(doc, async () => {
         loadCSS('/styles/lazy-styles.css');

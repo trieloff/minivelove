@@ -9,7 +9,7 @@ helix-posts a:hover {
 }
 
 helix-posts article {
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 
 helix-posts article h3 {
@@ -19,8 +19,8 @@ helix-posts article h3 {
 helix-posts article ul {
     display: block;
     list-style-type: none;
-    margin-block-start: 0.1em;
-    margin-block-end: 0.2em;
+    margin-block-start: 0.1rem;
+    margin-block-end: 0.2rem;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 0px;
@@ -37,12 +37,12 @@ helix-posts article li a {
     font-family: 'look-script';
     font-weight: 300;
     background-color: var(--main-highlight-color);
-    margin: 0.2em;
-    padding: 0.8em;
-    padding-left: 1em;
-    padding-right: 1em;
+    margin: 0.2rem;
+    padding: 0.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     font-size: 75%;
-    border-radius: 2em;
+    border-radius: 2rem;
 }
 
 helix-posts article li a::before {
@@ -51,12 +51,12 @@ helix-posts article li a::before {
 
 helix-posts article ul.colors li a {
     display: inline-block;
-    margin: 0.5em;
-    padding: 0.5em;
-    width: 2em;
-    height: 2em;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    width: 2rem;
+    height: 2rem;
     overflow: hidden;
-    border-radius: 2em;
+    border-radius: 2rem;
     color: transparent;
     background-color: attr(class);
     border: 1px solid;
@@ -88,7 +88,7 @@ helix-posts picture img {
 
 helix-posts nav {
     text-align: center;
-    margin-top: 1em;
+    margin-top: 1rem;
 }
 
 helix-posts nav a.next::after {
