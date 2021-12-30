@@ -106,15 +106,33 @@
   }
   
   /**
-   * Decorates all blocks in a container element.
+   * Decorates all blocks in a container element by turning them into custom elements.
    * @param {Element} $main The container element
    */
    export function decorateBlocks($main) {
-    Array.from($main.querySelectorAll('div[class]'))
+    Array.from($main.querySelectorAll('div.section-wrapper > div > div[class]'))
       .forEach(($block) => {
-        console.log('decorate', $block);
+        const blockName = $block.className;
         // $block.classList.add('block');
         $block.setAttribute('data-block-name', blockName);
+        const customEl = Array
+          .from($block.querySelectorAll(':scope > div'))
+          .reduce((cel, row) => {
+            const divs = Array.from(row.querySelectorAll(':scope > div'));
+            const name = divs.length === 1 ? `value` : divs[0].textContent.toLowerCase();
+            const textVal = row.querySelector(':scope > div:last-child').innerText;
+            const innerHTML = row.querySelector(':scope > div:last-child > *') && row.querySelector(':scope > div:last-child').innerHTML;
+            if (!innerHTML) {
+              cel.setAttribute(name, textVal);
+            } else {
+              const valEl = document.createElement(`helix-${name}`);
+              valEl.innerHTML = innerHTML;
+              cel.appendChild(valEl);
+            }
+            return cel;
+        }, document.createElement(`helix-${blockName}`))
+        customEl.setAttribute('data-block-name', blockName);
+        $block.parentElement.replaceChild(customEl, $block);
     });
   }
   
@@ -275,11 +293,42 @@
    */
   export function decorateMain($main) {
     wrapSections($main.querySelectorAll(':scope > div'));
-    decorateHeroSection();
     checkWebpFeature(() => {
       webpPolyfill($main);
     });
     decorateBlocks($main);
+    addMenu($main);
+  }
+
+  function addMenu(main) {
+    const checkbox = document.createElement('input');
+    checkbox.id = 'navigation';
+    checkbox.type = 'checkbox';
+    const label = document.createElement('label');
+    label.setAttribute('for', 'navigation');
+    label.innerHTML = `
+        <span class="bar">-</span>
+        <span class="bar">-</span>
+        <span class="bar">-</span>
+    `;
+
+    const nav = document.createElement('nav');
+    nav.innerHTML = `
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Contact</a></li>
+        </ul>
+    `;
+
+    const h1 = document.createElement('h1');
+    h1.innerHTML = `<span id="mini">Mini</span><span id="velo">velo</span>ve`;
+
+   
+    main.prepend(nav);
+    main.prepend(checkbox);
+    main.prepend(label);
+    main.prepend(h1);
   }
   
   /**

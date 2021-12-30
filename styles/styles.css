@@ -1,0 +1,88 @@
+@import url('../node_modules/source-sans/source-sans-3VF.css');
+@import url("https://use.typekit.net/vwt3ict.css");
+
+:root {
+    --main-bg-color: #f5f5f5;
+    --main-txt-color: #212121;
+    --main-accent-color: #be03fd;
+    --main-highlight-color: #fcfcfc;
+    transition: 300ms;
+  }
+
+body {
+    background-color: var(--main-bg-color);
+    font-family: 'Source Sans 3 VF', sans-serif;
+    line-height: 1.6;
+    color: var(--main-txt-color);
+}
+
+a:link {
+    color: var(--main-accent-color);
+}
+
+
+@keyframes logo {
+    0% {
+      color: var(--main-txt-color)
+    }
+  
+    50% {
+      color: var(--main-accent-color)
+    }
+  
+    100% {
+      color: var(--main-txt-color)
+    }
+  }
+
+#mini {
+    animation: logo 6s infinite linear 0s;
+}
+
+#velo {
+    animation: logo 3s infinite linear 0s;
+}
+
+
+@media (max-width: 500px) {
+    body {
+        margin: 0px;
+    }
+
+    h2, h3, h4, h5, h6 {
+        font-weight: 500;
+        margin: .5em;
+    }
+
+    h1 {
+        margin-left: 110px;
+        margin-right: auto;
+        margin-top: 17px;
+        margin-bottom: 0px;
+        font-size: 60px;
+        font-weight: 300;
+    }
+}
+
+@media (min-width: 500px) {
+    body {
+        margin: 1em;
+    }
+
+    main {
+        max-width: 40em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h2, h3, h4, h5, h6 {
+        font-weight: 300;
+    }
+
+    h1 {
+        margin-top: 17px;
+        font-size: 60px;
+        font-weight: 300;
+        margin-bottom: -0.5em;
+    }
+}

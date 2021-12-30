@@ -1,0 +1,158 @@
+#navigation {
+  display: none;
+}
+
+label[for=navigation] {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  margin: auto;
+  padding-top: 20px;
+  border: 5px solid transparent;
+  border-radius: 100%;
+  transition: 0.3s;
+  cursor: pointer;
+  color: transparent;
+  top: 1em;
+  left: 1em;
+  z-index: 200;
+}
+
+@keyframes col {
+  0% {
+    background-color: var(--main-txt-color)
+  }
+
+  39% {
+    background-color: var(--main-txt-color)
+  }
+
+  40% {
+    background-color: var(--main-accent-color)
+  }
+
+  50% {
+    background-color: var(--main-accent-color)
+  }
+
+  60% {
+    background-color: var(--main-accent-color)
+  }
+
+  61% {
+    background-color: var(--main-txt-color)
+  }
+
+  100% {
+    background-color: var(--main-txt-color)
+  }
+}
+
+.bar {
+  height: 5px;
+  width: 70px;
+  display: block;
+  margin: 10px auto;
+  position: relative;
+  border-radius: 10px;
+  transition: 0.4s;
+  background: var(--main-txt-color);
+}
+
+
+label[for=navigation] .bar {
+  position: absolute;
+}
+
+label[for=navigation] .bar:nth-of-type(1) {
+  top: 15px;
+  transition: top 0.3s ease 0.3s, transform 0.3s ease-out 0.1s;
+  animation: mrotr 2s cubic-bezier(0.5, 0.2, 0.2, 1.01), col 15s infinite linear 0s;
+}
+
+label[for=navigation] .bar:nth-of-type(2) {
+  top: 30px;
+  transition: ease 0.3s 0.3s;
+  animation: fade 2s cubic-bezier(0.5, 0.2, 0.2, 1.01), col 15s infinite linear 5s;
+}
+
+label[for=navigation] .bar:nth-of-type(3) {
+  top: 45px;
+  transition: top 0.3s ease 0.3s, transform 0.3s ease-out 0.1s;
+  animation: mrotl 2s cubic-bezier(0.5, 0.2, 0.2, 1.01), col 15s infinite linear 10s;
+}
+
+label[for=navigation]:hover .bar:nth-of-type(1), #navigation:checked~label[for=navigation] .bar:nth-of-type(1) {
+  top: 30px;
+  transform: rotate(45deg);
+  transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s;
+}
+
+label[for=navigation]:hover .bar:nth-of-type(2), #navigation:checked~label[for=navigation] .bar:nth-of-type(2) {
+  opacity: 0;
+}
+
+label[for=navigation]:hover .bar:nth-of-type(3), #navigation:checked~label[for=navigation] .bar:nth-of-type(3) {
+  top: 30px;
+  transform: rotate(-45deg);
+  transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s;
+}
+
+nav {
+  display: none;
+}
+
+#navigation:checked~nav {
+  display: block;
+}
+
+@media (min-width: 500px) {
+  nav ul {
+    list-style: none;
+    padding: 0px;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin-right: 1em;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    font-size: 200%;
+  }
+}
+
+@media (max-width: 500px) {
+  nav {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    top: 0px;
+    z-index: 100;
+    background-color: var(--main-bg-color);
+  }
+
+  nav ul {
+    width: 100%;
+    padding: 0px;
+    padding-top: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  nav li {
+    list-style: none;
+  }
+
+  nav li a {
+    color: var(--main-accent-color);
+    text-decoration: none;
+    font-size: 60px;
+    text-align: center;
+    display: block;
+    font-weight: 300;
+  }
+}
