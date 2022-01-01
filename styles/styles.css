@@ -1,129 +1,137 @@
-@import url('../node_modules/source-sans/source-sans-3VF.css');
+@import url("../node_modules/source-sans/source-sans-3VF.css");
 @import url("https://use.typekit.net/vwt3ict.css");
 
 :root {
-    --main-bg-color: #CDCBCC;
-    --main-txt-color: #1E232C;
-    --main-accent-color: #D93425;
-    --main-highlight-color: #E8EAEC;
-    transition: 300ms;
-  }
+  --main-bg-color: #cdcbcc;
+  --main-txt-color: #1e232c;
+  --main-accent-color: #d93425;
+  --main-highlight-color: #e8eaec;
+  transition: 300ms;
+}
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --main-bg-color: #1E232C;
-        --main-txt-color: #CDCBCC;
-        --main-accent-color: #D93425;
-        --main-highlight-color: #2B343C;
-        transition: 300ms;
-    }
+  :root {
+    --main-bg-color: #1e232c;
+    --main-txt-color: #cdcbcc;
+    --main-accent-color: #d93425;
+    --main-highlight-color: #2b343c;
+    transition: 300ms;
+  }
 }
 
 body {
-    background-color: var(--main-bg-color);
-    font-family: 'Source Sans 3 VF', sans-serif;
-    line-height: 1.6;
-    color: var(--main-txt-color);
+  background-color: var(--main-bg-color);
+  font-family: "Source Sans 3 VF", sans-serif;
+  line-height: 1.6;
+  color: var(--main-txt-color);
 }
 
-a:link, a:visited {
-    color: var(--main-accent-color);
+a:link,
+a:visited {
+  color: var(--main-accent-color);
 }
-
 
 @keyframes logo {
-    0% {
-      color: var(--main-txt-color)
-    }
-  
-    50% {
-      color: var(--main-accent-color)
-    }
-  
-    100% {
-      color: var(--main-txt-color)
-    }
+  0% {
+    color: var(--main-txt-color);
   }
 
-    body {
-        overflow-x:hidden
+  50% {
+    color: var(--main-accent-color);
   }
+
+  100% {
+    color: var(--main-txt-color);
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
 
 #mini {
-    animation: logo 6s infinite linear 0s;
+  animation: logo 6s infinite linear 0s;
 }
 
 #velo {
-    animation: logo 3s infinite linear 0s;
+  animation: logo 3s infinite linear 0s;
 }
 
 h1 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 h1 {
-    font-family: 'look-script';
+  font-family: "look-script";
 }
 
 @media (max-width: 42rem) {
-    body {
-        margin: 0.0rem;
-    }
+  body {
+    margin: 0rem;
+  }
 
-    h2, h3, h4, h5, h6 {
-        font-weight: 500;
-        margin: .5em;
-    }
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 500;
+    margin: 0.5em;
+  }
 
-    h1 {
-        margin-left: 110px;
-        margin-right: auto;
-        margin-top: 2rem;
-        margin-bottom: 0px;
-        font-size: calc(min(60px, 13vw));
-        font-weight: 300;
-    }
+  h1 {
+    margin-left: 110px;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 0px;
+    font-size: calc(min(60px, 13vw));
+    font-weight: 300;
+  }
 
-    img {
-        max-width: 100%;
-    }
+  img {
+    max-width: 100%;
+  }
 
-    p {
-        padding: 0.4em;
-    }
+  p {
+    padding: 0.4em;
+  }
 
-    p picture img {
-        margin-left: -0.4em;
-        max-width: 100vw;
-    }
+  p picture img {
+    margin-left: -0.4em;
+    max-width: 100vw;
+  }
 }
 
 @media (min-width: 42rem) {
-    body {
-        margin: 1rem;
-    }
+  body {
+    margin: 1rem;
+  }
 
-    main {
-        max-width: 40rem;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  main {
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    img {
-        max-width: 38rem;
-        border: 1em solid;
-        border-color: var(--main-highlight-color);
-    }
+  img {
+    max-width: 38rem;
+    border: 1em solid;
+    border-color: var(--main-highlight-color);
+  }
 
-    h2, h3, h4, h5, h6 {
-        font-weight: 300;
-    }
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 300;
+  }
 
-    h1 {
-        margin-top: 17px;
-        margin-left: calc(max(50% - 20rem, 7rem));
-        font-size: 60px;
-        font-weight: 300;
-        margin-bottom: -0.5rem;
-    }
+  h1 {
+    margin-top: 17px;
+    margin-left: calc(max(50% - 20rem, 7rem));
+    font-size: 60px;
+    font-weight: 300;
+    margin-bottom: -0.5rem;
+  }
 }

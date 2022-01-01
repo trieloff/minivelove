@@ -1,43 +1,44 @@
 footer {
-    background-color: var(--main-txt-color);
-    margin: -1rem;
-    padding: 1rem;
-    margin-top: 2rem;
-    margin-bottom: -2rem;
-    color: var(--main-highlight-color);
-    font-weight: 350;
-    text-align: center;
+  background-color: var(--main-txt-color);
+  margin: -1rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  margin-bottom: -2rem;
+  color: var(--main-highlight-color);
+  font-weight: 350;
+  text-align: center;
 }
 
 footer ol {
-    text-align: center;
+  text-align: center;
 }
 
 footer ol li {
-    display: inline-block;
-    margin: 1em;
+  display: inline-block;
+  margin: 1em;
 }
 
-footer a:link, footer a:visited {
-    color: var(--main-bg-color);
-    text-decoration: none;
-    font-family: 'look-script';
+footer a:link,
+footer a:visited {
+  color: var(--main-bg-color);
+  text-decoration: none;
+  font-family: "look-script";
 }
-
 
 @media (prefers-color-scheme: dark) {
-    footer {
-        background-color: var(--main-highlight-color);
-        color: var(--main-txt-color);
-    }
+  footer {
+    background-color: var(--main-highlight-color);
+    color: var(--main-txt-color);
+  }
 
-    footer a:link, footer a:visited {
-        color: var(--main-txt-color);
-    }
+  footer a:link,
+  footer a:visited {
+    color: var(--main-txt-color);
+  }
 }
 
 @media (max-with: 42rem) {
-    footer {
-        text-align: center;
-    }
+  footer {
+    text-align: center;
+  }
 }

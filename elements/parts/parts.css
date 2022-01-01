@@ -1,90 +1,91 @@
 helix-parts table {
-    width: 100%;
-    font-weight: 300;
-    margin: 0px;
-    border-collapse: collapse;
-    margin-top: 2rem;
+  width: 100%;
+  font-weight: 300;
+  margin: 0px;
+  border-collapse: collapse;
+  margin-top: 2rem;
 }
 
-helix-parts tr, helix-parts td {
-    margin: 0px;
-    padding: 0px;
+helix-parts tr,
+helix-parts td {
+  margin: 0px;
+  padding: 0px;
 }
 
 helix-parts th {
-    font-weight: 500;
-    text-align: left;
-    font-size: 50%;
-    text-transform: uppercase;
-    background: var(--main-highlight-color);
+  font-weight: 500;
+  text-align: left;
+  font-size: 50%;
+  text-transform: uppercase;
+  background: var(--main-highlight-color);
 }
 
 helix-parts tr td:first-child {
-    height: 50px;
-    width: 50px;
-    color: transparent;
-    background-image: url('chainset.svg');
-    background-size: 80%;
-    background-repeat: no-repeat;
-    background-position: 10% 10%;
+  height: 50px;
+  width: 50px;
+  color: transparent;
+  background-image: url("chainset.svg");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: 10% 10%;
 }
 
 helix-parts tr.saddle td:first-child {
-    background-image: url('saddle.svg');
+  background-image: url("saddle.svg");
 }
 
 helix-parts tr.frame td:first-child {
-    background-image: url('frame.svg');
+  background-image: url("frame.svg");
 }
 
 helix-parts tr.fork td:first-child {
-    background-image: url('fork.svg');
+  background-image: url("fork.svg");
 }
 
 helix-parts tr.bottombracket td:first-child {
-    background-image: url('bottombracket.svg');
+  background-image: url("bottombracket.svg");
 }
 
 helix-parts tr.brakes td:first-child {
-    background-image: url('brakes.svg');
+  background-image: url("brakes.svg");
 }
 
 helix-parts tr.cables td:first-child {
-    background-image: url('cables.svg');
+  background-image: url("cables.svg");
 }
 
 helix-parts tr.casette td:first-child {
-    background-image: url('casette.svg');
+  background-image: url("casette.svg");
 }
 
 helix-parts tr.chainring td:first-child {
-    background-image: url('chainring.svg');
+  background-image: url("chainring.svg");
 }
 
 helix-parts tr.chain td:first-child {
-    background-image: url('chain.svg');
+  background-image: url("chain.svg");
 }
 
 helix-parts tr.frontderailleur td:first-child {
-    background-image: url('frontderailleur.svg');
+  background-image: url("frontderailleur.svg");
 }
 
 helix-parts tr.grips td:first-child {
-    background-image: url('grips.svg');
+  background-image: url("grips.svg");
 }
 
 helix-parts tr.handlebars td:first-child {
-    background-image: url('handlebars.svg');
+  background-image: url("handlebars.svg");
 }
 
 helix-parts tr.headset td:first-child {
-    background-image: url('headset.svg');
+  background-image: url("headset.svg");
 }
 
 helix-parts tr.hubs td:first-child {
-    background-image: url('hubs.svg');
+  background-image: url("hubs.svg");
 }
 
 helix-parts a {
-    text-decoration: none;
+  text-decoration: none;
 }

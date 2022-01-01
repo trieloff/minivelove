@@ -1,7 +1,7 @@
 class Menu extends HTMLElement {
   constructor() {
-      super();
-      this.innerHTML = `
+    super();
+    this.innerHTML = `
       <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
   
       <label for="navi-toggle" class="navigation__button">
@@ -13,22 +13,22 @@ class Menu extends HTMLElement {
       <nav class="navigation__nav">
       </nav>`;
 
-      fetch('/nav').then(async (res) => {
-        // console.log('nav html', await res.text());
+    fetch("/nav").then(async (res) => {
+      // console.log('nav html', await res.text());
 
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(await res.text(), "text/html");
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(await res.text(), "text/html");
 
-        Array.from(doc.querySelectorAll('a')).forEach(a => {
-            const url = new URL(a.href);
-            url.hostname = undefined;
-            a.href = url.pathname;
-        });
-
-        this.querySelector('nav').innerHTML = doc.querySelector('ol').outerHTML;
-        document.querySelector('footer').innerHTML = doc.body.innerHTML;
+      Array.from(doc.querySelectorAll("a")).forEach((a) => {
+        const url = new URL(a.href);
+        url.hostname = undefined;
+        a.href = url.pathname;
       });
+
+      this.querySelector("nav").innerHTML = doc.querySelector("ol").outerHTML;
+      document.querySelector("footer").innerHTML = doc.body.innerHTML;
+    });
   }
 }
 
-customElements.define('custom-menu', Menu);
+customElements.define("custom-menu", Menu);
