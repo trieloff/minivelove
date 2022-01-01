@@ -6,6 +6,7 @@ class Gallery extends HTMLElement {
         this.images = Array.from(this.querySelectorAll('img'));
 
         const cycleimages = (e) => {
+            e.preventDefault();
             const goback = e.clientX / e.target.width < 0.4;
             const clicked = e.target;
             const selected = this.querySelector('img.selected');
