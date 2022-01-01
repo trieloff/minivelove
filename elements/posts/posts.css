@@ -4,7 +4,6 @@ helix-posts a:link, helix-posts a:visited {
 }
 
 helix-posts a:hover {
-    text-decoration: none;
     color: var(--main-accent-color);
 }
 
@@ -99,7 +98,7 @@ helix-posts nav a.previous::before {
     content: '« '
 }
 
-@media (max-width: 500px) {
+@media (max-width: 42rem) {
     helix-posts picture img {
         border: 0px;
         width: 100%;
@@ -110,7 +109,7 @@ helix-posts nav a.previous::before {
     }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 42rem) {
     helix-posts {
         display: grid;
         grid-template-columns: repeat(2, 1fr);

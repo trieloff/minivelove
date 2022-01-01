@@ -18,7 +18,7 @@ helix-gallery img.selected {
     display: block;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 42rem) {
 
     helix-gallery {
         line-height: 0;
@@ -38,12 +38,13 @@ helix-gallery img.selected {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 42 rem) {
 
     helix-gallery {
         column-count: 2;
         column-gap: 0rem;
         display: block;
+        user-select: none;
     }
 
     helix-gallery source {

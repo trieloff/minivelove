@@ -6,7 +6,7 @@ footer {
     margin-bottom: -2rem;
     color: var(--main-highlight-color);
     font-weight: 350;
-    font-family: 'look-script';
+    text-align: center;
 }
 
 footer ol {
@@ -21,4 +21,23 @@ footer ol li {
 footer a:link, footer a:visited {
     color: var(--main-bg-color);
     text-decoration: none;
+    font-family: 'look-script';
+}
+
+
+@media (prefers-color-scheme: dark) {
+    footer {
+        background-color: var(--main-highlight-color);
+        color: var(--main-txt-color);
+    }
+
+    footer a:link, footer a:visited {
+        color: var(--main-txt-color);
+    }
+}
+
+@media (max-with: 42rem) {
+    footer {
+        text-align: center;
+    }
 }

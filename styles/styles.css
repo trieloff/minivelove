@@ -2,12 +2,22 @@
 @import url("https://use.typekit.net/vwt3ict.css");
 
 :root {
-    --main-bg-color: #f5f5f5;
-    --main-txt-color: #212121;
-    --main-accent-color: #be03fd;
-    --main-highlight-color: #fcfcfc;
+    --main-bg-color: #CDCBCC;
+    --main-txt-color: #1E232C;
+    --main-accent-color: #D93425;
+    --main-highlight-color: #E8EAEC;
     transition: 300ms;
   }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-bg-color: #1E232C;
+        --main-txt-color: #CDCBCC;
+        --main-accent-color: #D93425;
+        --main-highlight-color: #2B343C;
+        transition: 300ms;
+    }
+}
 
 body {
     background-color: var(--main-bg-color);
@@ -16,7 +26,7 @@ body {
     color: var(--main-txt-color);
 }
 
-a:link {
+a:link, a:visited {
     color: var(--main-accent-color);
 }
 
@@ -35,6 +45,10 @@ a:link {
     }
   }
 
+    body {
+        overflow-x:hidden
+  }
+
 #mini {
     animation: logo 6s infinite linear 0s;
 }
@@ -43,10 +57,17 @@ a:link {
     animation: logo 3s infinite linear 0s;
 }
 
+h1 a {
+    text-decoration: none;
+}
 
-@media (max-width: 500px) {
+h1 {
+    font-family: 'look-script';
+}
+
+@media (max-width: 42rem) {
     body {
-        margin: 0px;
+        margin: 0.0rem;
     }
 
     h2, h3, h4, h5, h6 {
@@ -57,18 +78,27 @@ a:link {
     h1 {
         margin-left: 110px;
         margin-right: auto;
-        margin-top: 17px;
+        margin-top: 2rem;
         margin-bottom: 0px;
-        font-size: calc(min(60px, 8vh));
+        font-size: calc(min(60px, 13vw));
         font-weight: 300;
     }
 
     img {
         max-width: 100%;
     }
+
+    p {
+        padding: 0.4em;
+    }
+
+    p picture img {
+        margin-left: -0.4em;
+        max-width: 100vw;
+    }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 42rem) {
     body {
         margin: 1rem;
     }
@@ -95,6 +125,5 @@ a:link {
         font-size: 60px;
         font-weight: 300;
         margin-bottom: -0.5rem;
-        font-family: 'look-script';
     }
 }
