@@ -268,7 +268,8 @@ export function decorateBlocks($main) {
     const blockName = $block.className;
     // $block.classList.add('block');
     $block.setAttribute("data-block-name", blockName);
-    const customEl = Array.from($block.querySelectorAll(":scope > div")).reduce(
+    const rows = Array.from($block.querySelectorAll(":scope > div"))
+    const customEl = rows.reduce(
       (cel, row) => {
         const divs = Array.from(row.querySelectorAll(":scope > div"));
         const name =
@@ -277,11 +278,11 @@ export function decorateBlocks($main) {
         const innerHTML =
           row.querySelector(":scope > div:last-child > *") &&
           row.querySelector(":scope > div:last-child").innerHTML;
-        if (!innerHTML) {
+        if (!innerHTML && rows.length === 1) {
           cel.setAttribute(name, textVal);
         } else {
           const valEl = document.createElement(`helix-${name}`);
-          valEl.innerHTML = innerHTML;
+          valEl.innerHTML = innerHTML || textVal;
           cel.appendChild(valEl);
         }
         return cel;
