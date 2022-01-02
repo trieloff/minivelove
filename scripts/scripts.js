@@ -17,7 +17,7 @@
  * @param {Object} data additional data for RUM sample
  */
 
-const RUM_GENERATION = "blog-gen-6-clicktargets";
+const RUM_GENERATION = "gen-1-copypaste";
 
 export function sampleRUM(checkpoint, data = {}) {
   try {
