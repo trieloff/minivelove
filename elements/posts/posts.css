@@ -4,6 +4,10 @@ helix-posts a:visited {
   color: var(--main-txt-color);
 }
 
+helix-posts > helix-value {
+  display: none;
+}
+
 helix-posts a:hover {
   color: var(--main-accent-color);
 }
@@ -77,6 +81,10 @@ helix-posts ul.colors a.Red {
 
 helix-posts ul.colors a.Silver {
   background-color: silver;
+}
+
+helix-posts ul.colors a.Black {
+  background-color: black;
 }
 
 helix-posts picture img {
