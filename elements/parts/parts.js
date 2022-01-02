@@ -10,6 +10,9 @@ class Parts extends HTMLElement {
       frame: "frame",
       fork: "frame",
       stem: "cockpit",
+      rearderailleur: "drivetrain",
+      handlebar: "cockpit",
+      chainrings: "drivetrain",
     };
 
     this.parts = Array.from(this.querySelectorAll(":scope > *"))

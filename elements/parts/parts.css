@@ -21,70 +21,114 @@ helix-parts th {
 }
 
 helix-parts tr td:first-child {
-  height: 50px;
-  width: 50px;
+  height: 65px;
+  width: 65px;
   color: transparent;
-  background-image: url("chainset.svg");
+  mask-image: url("chainset.svg");
+  -webkit-mask-image: url("chainset.svg");
+  -webkit-mask-repeat: no-repeat;
+  background-color: var(--main-txt-color);
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: 10% 10%;
 }
 
 helix-parts tr.saddle td:first-child {
-  background-image: url("saddle.svg");
+  mask-image: url("saddle.svg");
+  -webkit-mask-image: url("saddle.svg");
 }
 
 helix-parts tr.frame td:first-child {
-  background-image: url("frame.svg");
+  mask-image: url("frame.svg");
+  -webkit-mask-image: url("frame.svg");
 }
 
 helix-parts tr.fork td:first-child {
-  background-image: url("fork.svg");
+  mask-image: url("fork.svg");
+  -webkit-mask-image: url("fork.svg");
 }
 
 helix-parts tr.bottombracket td:first-child {
-  background-image: url("bottombracket.svg");
+  mask-image: url("bottombracket.svg");
+  -webkit-mask-image: url("bottombracket.svg");
 }
 
 helix-parts tr.brakes td:first-child {
-  background-image: url("brakes.svg");
+  mask-image: url("brakes.svg");
+  -webkit-mask-image: url("brakes.svg");
 }
 
 helix-parts tr.cables td:first-child {
-  background-image: url("cables.svg");
+  mask-image: url("cables.svg");
+  -webkit-mask-image: url("cables.svg");
 }
 
 helix-parts tr.casette td:first-child {
-  background-image: url("casette.svg");
+  mask-image: url("casette.svg");
+  -webkit-mask-image: url("casette.svg");
 }
 
 helix-parts tr.chainring td:first-child {
-  background-image: url("chainring.svg");
+  mask-image: url("chainring.svg");
+  -webkit-mask-image: url("chainring.svg");
 }
 
 helix-parts tr.chain td:first-child {
-  background-image: url("chain.svg");
+  mask-image: url("chain.svg");
+  -webkit-mask-image: url("chain.svg");
 }
 
 helix-parts tr.frontderailleur td:first-child {
-  background-image: url("frontderailleur.svg");
+  mask-image: url("frontderailleur.svg");
+  -webkit-mask-image: url("frontderailleur.svg");
 }
 
 helix-parts tr.grips td:first-child {
-  background-image: url("grips.svg");
+  mask-image: url("grips.svg");
+  -webkit-mask-image: url("grips.svg");
 }
 
 helix-parts tr.handlebars td:first-child {
-  background-image: url("handlebars.svg");
+  mask-image: url("handlebars.svg");
+  -webkit-mask-image: url("handlebars.svg");
 }
 
 helix-parts tr.headset td:first-child {
-  background-image: url("headset.svg");
+  mask-image: url("headset.svg");
+  -webkit-mask-image: url("headset.svg");
 }
 
 helix-parts tr.hubs td:first-child {
-  background-image: url("hubs.svg");
+  mask-image: url("hubs.svg");
+  -webkit-mask-image: url("hubs.svg");
 }
+
+helix-parts tr.rearderailleur td:first-child {
+  mask-image: url("rearderailleur.svg");
+  -webkit-mask-image: url("rearderailleur.svg");
+}
+
+helix-parts tr.seatpost td:first-child {
+  mask-image: url("seatpost.svg");
+  -webkit-mask-image: url("seatpost.svg");
+}
+
+
+helix-parts tr.stem td:first-child {
+  mask-image: url("stem.svg");
+  -webkit-mask-image: url("stem.svg");
+}
+
+helix-parts tr.handlebar td:first-child {
+  mask-image: url("handlebars.svg");
+  -webkit-mask-image: url("handlebars.svg");
+}
+
+helix-parts tr.chainrings td:first-child {
+  mask-image: url("chainring.svg");
+  -webkit-mask-image: url("chainring.svg");
+}
+
 
 helix-parts a {
   text-decoration: none;
