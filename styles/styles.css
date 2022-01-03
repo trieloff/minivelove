@@ -45,11 +45,6 @@ a:visited {
   }
 }
 
-body, html {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
 #mini {
   animation: logo 6s infinite linear 0s;
 }
