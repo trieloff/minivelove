@@ -100,7 +100,7 @@ h1 {
 
 @media (min-width: 42rem) {
   body {
-    margin: 1rem;
+    margin: 0rem;
   }
 
   main {
