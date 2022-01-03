@@ -2,7 +2,7 @@
   display: none;
 }
 .navigation__button {
-  background-color: var(--main-bg-color);
+  background-color: var(--main-highlight-color);
   height: 5rem;
   width: 5rem;
   position: absolute;
@@ -28,6 +28,22 @@
   z-index: 1000;
   transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1);
 }
+/* 
+@media (max-width: 42rem) {
+  .navigation__button {
+    height: 4rem;
+    width: 4rem;
+    top: 1rem;
+    left: 1rem;
+  }
+  .navigation__background {
+    height: 3rem;
+    width: 3rem;
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+} */
+
 custom-menu nav {
   height: 100vh;
   position: fixed;

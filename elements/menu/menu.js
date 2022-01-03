@@ -26,7 +26,7 @@ class Menu extends HTMLElement {
       });
 
       this.querySelector("nav").innerHTML = doc.querySelector("ol").outerHTML;
-      document.querySelector("footer").innerHTML = doc.body.innerHTML;
+      document.querySelector("footer").innerHTML = doc.body.querySelector('main').innerHTML;
     });
   }
 }
