@@ -113,6 +113,7 @@ h1 {
   img {
     max-width: 38rem;
     border: 1em solid;
+    height: auto;
     border-color: var(--main-highlight-color);
   }
 
